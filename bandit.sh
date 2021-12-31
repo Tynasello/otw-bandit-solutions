@@ -870,4 +870,32 @@ bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
 #   20  --------------------
 #
 
- 
+#  In terminal 1
+bandit20@bandit:~$ cat /etc/bandit_pass/bandit20 | nc -l localhost -p 1111
+
+# In second Terminal
+bandit20@bandit:~$ ./suconnect 1111
+# Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+# Password matches, sending next password
+
+# Back to first terminal
+# gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+# or you can manually enter the previous password. It doesn't matter.
+#  --------------------
+
+# In first terminal 
+bandit20@bandit:~$ nc -l localhost -p 1111
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+# In second terminal 
+bandit20@bandit:~$ ./suconnect 1111
+# Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+# Password matches, sending next password
+
+# password is then sent to first terminal:
+# gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+#
+#   21  --------------------
+#
