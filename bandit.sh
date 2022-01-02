@@ -1065,3 +1065,579 @@ bandit24@bandit:/tmp/tysdir$ ./guess.sh
 #
 #   25  --------------------
 #
+
+bandit25@bandit:~$ cat /etc/passwd | grep bandit26
+# bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+bandit25@bandit:~$ cat /usr/bin/showtext
+#!/bin/sh
+
+# export TERM=linux
+
+# more ~/text.txt
+# exit 0
+bandit25@bandit:~$ ls
+# bandit26.sshkey
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+# Could not create directory '/home/bandit25/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit25/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# Linux bandit.otw.local 5.4.8 x86_64 GNU/Linux
+
+#     #   ,----..            ,----,          .---.
+#      /   /   \         ,/   .`|         /. ./|
+#     /   .     :      ,`   .'  :     .--'.  ' ;
+#    .   /   ;.  \   ;    ;     /    /__./ \ : |
+#   .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+#   ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+#   |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+#   .   |  ' ' ' : `----'  |  |  \   ;  `      |
+#   '   ;  \; /  |     '   :  ;   .   \    .\  ;
+#    \   \  ',  /      |   |  '    \   \   ' \ |
+#     ;   :    /       '   :  |     :   '  |--"
+#      \   \ .'        ;   |.'       \   \ ;
+#   www. `---` ver     '---' he       '---" ire.org
+
+
+# Welcome to OverTheWire!
+
+# If you find any problems, please report them to Steven or morla on
+# irc.overthewire.org.
+
+# --[ Playing the games ]--
+
+#   This machine might hold several wargames.
+#   If you are playing "somegame", then:
+
+#     * USERNAMES are somegame0, somegame1, ...
+#     * Most LEVELS are stored in /somegame/.
+#     * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+#   Write-access to homedirectories is disabled. It is advised to create a
+#   working directory with a hard-to-guess name in /tmp/.  You can use the
+#   command "mktemp -d" in order to generate a random and hard to guess
+#   directory in /tmp/.  Read-access to both /tmp/ and /proc/ is disabled
+#   so that users can not snoop on eachother. Files and directories with
+#   easily guessable or short names will be periodically deleted!
+
+#   Please play nice:
+
+#     * don't leave orphan processes running
+#     * don't leave exploit-files laying around
+#     * don't annoy other players
+#     * don't post passwords or spoilers
+#     * again, DONT POST SPOILERS!
+#       This includes writeups of your solution on your blog or website!
+
+# --[ Tips ]--
+
+#   This machine has a 64bit processor and many security-features enabled
+#   by default, although ASLR has been switched off.  The following
+#   compiler flags might be interesting:
+
+#     -m32                    compile for 32bit
+#     -fno-stack-protector    disable ProPolice
+#     -Wl,-z,norelro          disable relro
+
+#   In addition, the execstack tool can be used to flag the stack as
+#   executable on ELF binaries.
+
+#   Finally, network-access is limited for most levels by a local
+#   firewall.
+
+# --[ Tools ]--
+
+#  For your convenience we have installed a few usefull tools which you can find
+#  in the following locations:
+
+#     * gef (https://github.com/hugsy/gef) in /usr/local/gef/
+#     * pwndbg (https://github.com/pwndbg/pwndbg) in /usr/local/pwndbg/
+#     * peda (https://github.com/longld/peda.git) in /usr/local/peda/
+#     * gdbinit (https://github.com/gdbinit/Gdbinit) in /usr/local/gdbinit/
+#     * pwntools (https://github.com/Gallopsled/pwntools)
+#     * radare2 (http://www.radare.org/)
+#     * checksec.sh (http://www.trapkit.de/tools/checksec.html) in /usr/local/bin/checksec.sh
+
+# --[ More information ]--
+
+#   For more information regarding individual wargames, visit
+#   http://www.overthewire.org/wargames/
+
+#   For support, questions or comments, contact us through IRC on
+#   irc.overthewire.org #wargames.
+
+#   Enjoy your stay!
+
+#   _                     _ _ _   ___   __
+#  | |                   | (_) | |__ \ / /
+#  | |__   __ _ _ __   __| |_| |_   ) / /_
+#  | '_ \ / _` | '_ \ / _` | | __| / / '_ \
+#  | |_) | (_| | | | | (_| | | |_ / /| (_) |
+#  |_.__/ \__,_|_| |_|\__,_|_|\__|____\___/
+# Connection to localhost closed.
+
+# now minimize window of terminal so window will buffer when more command executed
+bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
+# Could not create directory '/home/bandit25/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit25/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# Linux bandit.otw.local 5.4.8 x86_64 GNU/Linux
+
+#       ,----..            ,----,          .---.
+#      /   /   \         ,/   .`|         /. ./|
+#     /   .     :      ,`   .'  :     .--'.  ' ;
+#    .   /   ;.  \   ;    ;     /    /__./ \ : |
+#   .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+#   ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+#   |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+#   .   |  ' ' ' : `----'  |  |  \   ;  `      |
+#   '   ;  \; /  |     '   :  ;   .   \    .\  ;
+#    \   \  ',  /      |   |  '    \   \   ' \ |
+#     ;   :    /       '   :  |     :   '  |--"
+#      \   \ .'        ;   |.'       \   \ ;
+#   www. `---` ver     '---' he       '---" ire.org
+
+
+# Welcome to OverTheWire!
+
+# If you find any problems, please report them to Steven or morla on
+# irc.overthewire.org.
+
+# --[ Playing the games ]--
+
+#   This machine might hold several wargames.
+#   If you are playing "somegame", then:
+
+#     * USERNAMES are somegame0, somegame1, ...
+#     * Most LEVELS are stored in /somegame/.
+#     * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+#   Write-access to homedirectories is disabled. It is advised to create a
+#   working directory with a hard-to-guess name in /tmp/.  You can use the
+#   command "mktemp -d" in order to generate a random and hard to guess
+#   directory in /tmp/.  Read-access to both /tmp/ and /proc/ is disabled
+#   so that users can not snoop on eachother. Files and directories with
+#   easily guessable or short names will be periodically deleted!
+
+#   Please play nice:
+
+#     * don't leave orphan processes running
+#     * don't leave exploit-files laying around
+#     * don't annoy other players
+#     * don't post passwords or spoilers
+#     * again, DONT POST SPOILERS!
+#       This includes writeups of your solution on your blog or website!
+
+# --[ Tips ]--
+
+#   This machine has a 64bit processor and many security-features enabled
+#   by default, although ASLR has been switched off.  The following
+#   compiler flags might be interesting:
+
+#     -m32                    compile for 32bit
+#     -fno-stack-protector    disable ProPolice
+#     -Wl,-z,norelro          disable relro
+
+#   In addition, the execstack tool can be used to flag the stack as
+#   executable on ELF binaries.
+
+#   Finally, network-access is limited for most levels by a local
+#   firewall.
+
+# ----------------------------------------------------------------
+#  while more is buffering, type v to open vim editor.
+#  then type :r to read a file and type /etc/bandit_pass/bandit26
+#  the password for level 26 is then printed in the console
+# ----------------------------------------------------------------
+
+#   1   _                     _ _ _   ___   __
+#   2 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+#   3  | |                   | (_) | |__ \ / /
+#   4  | |__   __ _ _ __   __| |_| |_   ) / /_
+#   5  | '_ \ / _` | '_ \ / _` | | __| / / '_ \
+#   6  | |_) | (_| | | | | (_| | | |_ / /| (_) |
+#   7  |_.__/ \__,_|_| |_|\__,_|_|\__|____\___/
+
+# 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+#
+#   26  --------------------
+#
+
+# follow the same steps as previous level. Once in editor (by typing v when move
+# is buffering) type the following
+# :set shell = /bin/bash
+# :shell
+# now,
+
+bandit26@bandit:~$ ls
+# bandit27-do  text.txt
+bandit26@bandit:~$ file bandit27-do
+# bandit27-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
+bandit26@bandit:~$ ./bandit27-do
+# Run a command as another user.
+#   Example: ./bandit27-do id
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+# 3ba3118a22e93127a4ed485be72ef5ea
+
+#
+#   27  --------------------
+#
+
+tynasello@ty-ws ~ % mkdir /tmp/tysdirr
+tynasello@ty-ws ~ % cd /tmp/tysdirr
+bandit27@bandit:/tmp/tysdirr$ git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+# Cloning into 'repo'...
+# Could not create directory '/home/bandit27/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit27/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit27-git@localhost's password:
+# remote: Counting objects: 3, done.
+# remote: Compressing objects: 100% (2/2), done.
+# remote: Total 3 (delta 0), reused 0 (delta 0)
+# Receiving objects: 100% (3/3), 288 bytes | 0 bytes/s, done.
+bandit27@bandit:/tmp/tysdirr$ ls
+# repo
+bandit27@bandit:/tmp/tysdirr$ ls -al repo
+# total 16
+# drwxr-sr-x 3 bandit27 root 4096 Jan  2 20:04 .
+# drwxr-sr-x 3 bandit27 root 4096 Jan  2 20:04 ..
+# drwxr-sr-x 8 bandit27 root 4096 Jan  2 20:04 .git
+# -rw-r--r-- 1 bandit27 root   68 Jan  2 20:04 README
+bandit27@bandit:/tmp/tysdirr$ cat repo/README
+# The password to the next level is: 0ef186ac70e04ea33b4c1853d2526fa2
+# 0ef186ac70e04ea33b4c1853d2526fa2
+
+#
+#   28  --------------------
+#
+
+bandit28@bandit:~$ mkdir /tmp/ty555
+bandit28@bandit:~$ cd /tmp/ty555
+bandit28@bandit:/tmp/ty555$ git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+# Cloning into 'repo'...
+# Could not create directory '/home/bandit28/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit28/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit28-git@localhost's password:
+# remote: Counting objects: 9, done.
+# remote: Compressing objects: 100% (6/6), done.
+# remote: Total 9 (delta 2), reused 0 (delta 0)
+# Receiving objects: 100% (9/9), done.
+# Resolving deltas: 100% (2/2), done.
+bandit28@bandit:/tmp/ty555$ ls
+# repo
+bandit28@bandit:/tmp/ty555$ cd repo
+bandit28@bandit:/tmp/ty555/repo$ ls -al
+# total 16
+# drwxr-sr-x 3 bandit28 root 4096 Jan  2 20:19 .
+# drwxr-sr-x 3 bandit28 root 4096 Jan  2 20:19 ..
+# drwxr-sr-x 8 bandit28 root 4096 Jan  2 20:19 .git
+# -rw-r--r-- 1 bandit28 root  111 Jan  2 20:19 README.md
+bandit28@bandit:/tmp/ty555/repo$ git log
+# commit edd935d60906b33f0619605abd1689808ccdd5ee
+# Author: Morla Porla <morla@overthewire.org>
+# Date:   Thu May 7 20:14:49 2020 +0200
+
+#     fix info leak
+
+# commit c086d11a00c0648d095d04c089786efef5e01264
+# Author: Morla Porla <morla@overthewire.org>
+# Date:   Thu May 7 20:14:49 2020 +0200
+
+#     add missing data
+
+# commit de2ebe2d5fd1598cd547f4d56247e053be3fdc38
+# Author: Ben Dover <noone@overthewire.org>
+# Date:   Thu May 7 20:14:49 2020 +0200
+
+#     initial commit of README.md
+git show c086d11a00c0648d095d04c089786efef5e01264
+# commit c086d11a00c0648d095d04c089786efef5e01264
+# Author: Morla Porla <morla@overthewire.org>
+# Date:   Thu May 7 20:14:49 2020 +0200
+
+#     add missing data
+
+# diff --git a/README.md b/README.md
+# index 7ba2d2f..3f7cee8 100644
+# --- a/README.md
+# +++ b/README.md
+# @@ -4,5 +4,5 @@ Some notes for level29 of bandit.
+ ## credentials
+
+#  - username: bandit29
+# -- password: <TBD>
+# +- password: bbc96594b4e001778eee9975372716b2
+
+# bbc96594b4e001778eee9975372716b2
+
+#
+#   29  --------------------
+#
+
+bandit29@bandit:~$ mkdir /tmp/tys012
+bandit29@bandit:~$ cd /tmp/tys012
+bandit29@bandit:/tmp/tys012$ git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+# Cloning into 'repo'...
+# Could not create directory '/home/bandit29/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit29/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit29-git@localhost's password:
+# remote: Counting objects: 16, done.
+# remote: Compressing objects: 100% (11/11), done.
+# remote: Total 16 (delta 2), reused 0 (delta 0)
+# Receiving objects: 100% (16/16), 1.43 KiB | 0 bytes/s, done.
+# Resolving deltas: 100% (2/2), done.
+bandit29@bandit:/tmp/tys012$ ls
+# repo
+bandit29@bandit:/tmp/tys012$ cd repo
+bandit29@bandit:/tmp/tys012/repo$ ls -al
+# total 16
+# drwxr-sr-x 3 bandit29 root 4096 Jan  2 20:26 .
+# drwxr-sr-x 3 bandit29 root 4096 Jan  2 20:26 ..
+# drwxr-sr-x 8 bandit29 root 4096 Jan  2 20:26 .git
+# -rw-r--r-- 1 bandit29 root  131 Jan  2 20:26 README.md
+bandit29@bandit:/tmp/tys012/repo$ cat README.md
+# Bandit Notes
+# Some notes for bandit30 of bandit.
+
+# credentials
+
+# - username: bandit30
+# - password: <no passwords in production!>
+
+bandit29@bandit:/tmp/tys012/repo$ git branch -a
+# * master
+#   remotes/origin/HEAD -> origin/master
+#   remotes/origin/dev
+#   remotes/origin/master
+#   remotes/origin/sploits-dev
+bandit29@bandit:/tmp/tys012/repo$ git checkout remotes/origin/dev
+# Note: checking out 'remotes/origin/dev'.
+
+# You are in 'detached HEAD' state. You can look around, make experimental
+# changes and commit them, and you can discard any commits you make in this
+# state without impacting any branches by performing another checkout.
+
+# If you want to create a new branch to retain commits you create, you may
+# do so (now or later) by using -b with the checkout command again. Example:
+
+#   git checkout -b <new-branch-name>
+
+# HEAD is now at bc83328... add data needed for development
+# bandit29@bandit:/tmp/tys012/repo$ git log
+# commit bc833286fca18a3948aec989f7025e23ffc16c07
+# Author: Morla Porla <morla@overthewire.org>
+# Date:   Thu May 7 20:14:52 2020 +0200
+
+#     add data needed for development
+
+# commit 8e6c203f885bd4cd77602f8b9a9ea479929ffa57
+# Author: Ben Dover <noone@overthewire.org>
+# Date:   Thu May 7 20:14:51 2020 +0200
+
+#     add gif2ascii
+
+# commit 208f463b5b3992906eabf23c562eda3277fea912
+# Author: Ben Dover <noone@overthewire.org>
+# Date:   Thu May 7 20:14:51 2020 +0200
+
+#     fix username
+
+# commit 18a6fd6d5ef7f0874bbdda2fa0d77b3b81fd63f7
+# Author: Ben Dover <noone@overthewire.org>
+# Date:   Thu May 7 20:14:51 2020 +0200
+
+#     initial commit of README.md
+bandit29@bandit:/tmp/tys012/repo$ git show bc833286fca18a3948aec989f7025e23ffc16c07
+# commit bc833286fca18a3948aec989f7025e23ffc16c07
+# Author: Morla Porla <morla@overthewire.org>
+# Date:   Thu May 7 20:14:52 2020 +0200
+
+#     add data needed for development
+
+# diff --git a/README.md b/README.md
+# index 1af21d3..39b87a8 100644
+# --- a/README.md
+# +++ b/README.md
+# @@ -4,5 +4,5 @@ Some notes for bandit30 of bandit.
+#  ## credentials
+
+#  - username: bandit30
+# -- password: <no passwords in production!>
+# +- password: 5b90576bedb2cc04c86a9e924ce42faf
+
+# 5b90576bedb2cc04c86a9e924ce42faf
+
+#
+#   30  --------------------
+#
+
+bandit30@bandit:~$ mkdir /tmp/ty33
+bandit30@bandit:~$ cd /tmp/ty33
+bandit30@bandit:/tmp/ty33$ git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+# Cloning into 'repo'...
+# Could not create directory '/home/bandit30/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit30/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit30-git@localhost's password:
+# remote: Counting objects: 4, done.
+# remote: Total 4 (delta 0), reused 0 (delta 0)
+# Receiving objects: 100% (4/4), done.
+bandit30@bandit:/tmp/ty33$ cd repo
+bandit30@bandit:/tmp/ty33/repo$ ls -al
+# total 16
+# drwxr-sr-x 3 bandit30 root 4096 Jan  2 20:35 .
+# drwxr-sr-x 3 bandit30 root 4096 Jan  2 20:35 ..
+# drwxr-sr-x 8 bandit30 root 4096 Jan  2 20:35 .git
+# -rw-r--r-- 1 bandit30 root   30 Jan  2 20:35 README.md
+bandit30@bandit:/tmp/ty33/repo$ cat README.md
+# just an epmty file... muahaha
+bandit30@bandit:/tmp/ty33/repo$ git log
+# commit 3aefa229469b7ba1cc08203e5d8fa299354c496b
+# Author: Ben Dover <noone@overthewire.org>
+# Date:   Thu May 7 20:14:54 2020 +0200
+
+#     initial commit of README.md
+bandit30@bandit:/tmp/ty33/repo$ git branch -a
+# * master
+#   remotes/origin/HEAD -> origin/master
+#   remotes/origin/master
+bandit30@bandit:/tmp/ty33/repo$ cd .git
+bandit30@bandit:/tmp/ty33/repo/.git$ ls -al
+# total 52
+# drwxr-sr-x 8 bandit30 root 4096 Jan  2 20:35 .
+# drwxr-sr-x 3 bandit30 root 4096 Jan  2 20:35 ..
+# drwxr-sr-x 2 bandit30 root 4096 Jan  2 20:35 branches
+# -rw-r--r-- 1 bandit30 root  276 Jan  2 20:35 config
+# -rw-r--r-- 1 bandit30 root   73 Jan  2 20:35 description
+# -rw-r--r-- 1 bandit30 root   23 Jan  2 20:35 HEAD
+# drwxr-sr-x 2 bandit30 root 4096 Jan  2 20:35 hooks
+# -rw-r--r-- 1 bandit30 root  137 Jan  2 20:35 index
+# drwxr-sr-x 2 bandit30 root 4096 Jan  2 20:35 info
+# drwxr-sr-x 3 bandit30 root 4096 Jan  2 20:35 logs
+# drwxr-sr-x 4 bandit30 root 4096 Jan  2 20:35 objects
+# -rw-r--r-- 1 bandit30 root  165 Jan  2 20:35 packed-refs
+# drwxr-sr-x 5 bandit30 root 4096 Jan  2 20:35 refs
+bandit30@bandit:/tmp/ty33/repo/.git$ cat packed-refs
+# pack-refs with: peeled fully-peeled
+# 3aefa229469b7ba1cc08203e5d8fa299354c496b refs/remotes/origin/master
+# f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea refs/tags/secret
+bandit30@bandit:/tmp/ty33/repo/.git$ git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+# 47e603bb428404d265f59c42920d81e5
+
+#
+#   31  --------------------
+#
+
+bandit31@bandit:~$ mkdir /tmp/tyy
+bandit31@bandit:~$ cd /tmp/tyy
+bandit31@bandit:/tmp/tyy$ git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+# Cloning into 'repo'...
+# Could not create directory '/home/bandit31/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit31-git@localhost's password:
+# remote: Counting objects: 4, done.
+# remote: Compressing objects: 100% (3/3), done.
+# remote: Total 4 (delta 0), reused 0 (delta 0)
+# Receiving objects: 100% (4/4), done.
+bandit31@bandit:/tmp/tyy$ cd repo
+bandit31@bandit:/tmp/tyy/repo$ ls -al
+# total 20
+# drwxr-sr-x 3 bandit31 root 4096 Jan  2 20:48 .
+# drwxr-sr-x 3 bandit31 root 4096 Jan  2 20:48 ..
+# drwxr-sr-x 8 bandit31 root 4096 Jan  2 20:48 .git
+# -rw-r--r-- 1 bandit31 root    6 Jan  2 20:48 .gitignore
+# -rw-r--r-- 1 bandit31 root  147 Jan  2 20:48 README.md
+# bandit31@bandit:/tmp/tyy/repo$ cat README.md
+# This time your task is to push a file to the remote repository.
+
+# Details:
+#     File name: key.txt
+#     Content: 'May I come in?'
+#     Branch: master
+
+bandit31@bandit:/tmp/tyy/repo$ cat > key.txt
+May I come in?
+^C
+bandit31@bandit:/tmp/tyy/repo$ git branch
+# * master
+bandit31@bandit:/tmp/tyy/repo$ git add key.txt
+# The following paths are ignored by one of your .gitignore files:
+# key.txt
+# Use -f if you really want to add them.
+bandit31@bandit:/tmp/tyy/repo$ cat .gitignore
+# *.txt
+bandit31@bandit:/tmp/tyy/repo$ rm .gitignore
+bandit31@bandit:/tmp/tyy/repo$ git add key.txt
+bandit31@bandit:/tmp/tyy/repo$ git commit -m "first"
+# [master 5bef617] first
+#  1 file changed, 1 insertion(+)
+#  create mode 100644 key.txt
+# bandit31@bandit:/tmp/tyy/repo$ git push
+# Could not create directory '/home/bandit31/.ssh'.
+# The authenticity of host 'localhost (127.0.0.1)' can't be established.
+# ECDSA key fingerprint is SHA256:98UL0ZWr85496EtCRkKlo20X3OPnyPSB5tB5RPbhczc.
+# Are you sure you want to continue connecting (yes/no)? yes
+# Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+# This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+# bandit31-git@localhost's password:
+# Counting objects: 3, done.
+# Delta compression using up to 2 threads.
+# Compressing objects: 100% (2/2), done.
+# Writing objects: 100% (3/3), 315 bytes | 0 bytes/s, done.
+# Total 3 (delta 0), reused 0 (delta 0)
+# remote: ### Attempting to validate files... ####
+# remote:
+# remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+# remote:
+# remote: Well done! Here is the password for the next level:
+# remote: 56a9bf19c63d650ce78e6ec0354ee45e
+# remote:
+# remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+# remote:
+# To ssh://localhost/home/bandit31-git/repo
+#  ! [remote rejected] master -> master (pre-receive hook declined)
+# error: failed to push some refs to 'ssh://bandit31-git@localhost/home/bandit31-git/repo'
+
+# 56a9bf19c63d650ce78e6ec0354ee45e
+
+#
+#   32  --------------------
+#
+
+>> $0
+$ export SHELL=/bin/bash
+$ $SHELL
+bandit33@bandit:~$ cat /etc/bandit_pass/bandit33
+# c9c3199ddf4121b10cf581a98d51caee
